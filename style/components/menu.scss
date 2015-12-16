@@ -3,6 +3,7 @@
 	text-align: center;
 	font-size: 0;
 }
+
 .menu__item {
     display: inline-block;
     transition: all 0.25s ease-in-out;
@@ -11,6 +12,20 @@
     	background-color: lighten($menu-bg-color, 5%);
     }
 }
+
+.menu__link {
+    display: inline-block;
+    text-decoration: none;
+    color: $menu-item-color;
+    font-weight: 700;
+    padding: 0.5rem 2.5rem;
+    transition: all 0.25s ease-in-out;
+
+    .menu__item:hover & {
+    	color: $menu-item-hover-color;
+    }
+}
+
 .menu__header {
 	font-size: 1rem;
 }
