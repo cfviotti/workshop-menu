@@ -50,3 +50,15 @@
     }
 }
 
+.submenu__group {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    padding: 1rem 0;
+    vertical-align: middle;
+
+    &--featured {
+    	@extend .submenu__group;
+    	background-color: lighten($menu-bg-color, 15%);
+    }
+}
