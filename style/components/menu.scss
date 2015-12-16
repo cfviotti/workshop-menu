@@ -68,10 +68,28 @@
 }	
 
 .submenu__link {
+	position: relative;
     display: inline-block;
     font-size: 1rem;
     text-decoration: none;
     color: $submenu-item-color;
     padding: 0.2rem;
+
+    &::after {
+    	content: '';
+    	position: absolute;
+    	background-color: $submenu-item-color;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	height: 1px;
+    	width: 0;
+    	margin: auto;
+    	transition: all 0.25s cubic-bezier(.55,0,.1,1);
+    }
+
+    &:hover::after {
+    	width: 85%;
+    }
 }
 
