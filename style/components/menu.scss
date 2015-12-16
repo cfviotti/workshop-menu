@@ -29,3 +29,24 @@
 .menu__header {
 	font-size: 1rem;
 }
+
+.submenu {
+    position: absolute;
+    left: 0;
+    font-size: 0;
+    width: 100%;
+    padding: 0;
+    padding-top: 0.75rem;
+    background-color: lighten($menu-bg-color, 5%);
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out, visibility 0s 0.25s;
+
+    .menu__item:hover & {
+    	visibility: visible;
+    	opacity: 1;
+    	transition: opacity 0.25s ease-in-out, visibility 0s 0s;
+    }
+}
+
