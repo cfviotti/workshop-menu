@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,300);
+body {
+  margin: 0; }
+
+ul, li, ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Open Sans", Roboto, Arial, sans-serif;
+  background: -moz-linear-gradient(top, #000033 0%, black 100%);
+  background: -webkit-linear-gradient(top, #000033 0%, black 100%);
+  background: linear-gradient(to bottom, #000033 0%, black 100%); }
+
+.logo {
+  width: 320px;
+  height: 140px;
+  background-image: url("../img/logo.svg");
+  display: block;
+  margin: 0 auto;
+  background-size: 100%;
+  margin-top: 80px;
+  margin-bottom: 60px; }
+
+.menu {
+  background-color: #1a1938;
+  text-align: center;
+  font-size: 0; }
+
+.menu__item {
+  display: inline-block;
+  transition: all 0.25s ease-in-out; }
+  .menu__item:hover {
+    background-color: #22214a; }
+
+.menu__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #97cbff;
+  font-weight: 700;
+  padding: 0.5rem 2.5rem;
+  transition: all 0.25s ease-in-out; }
+  .menu__item:hover .menu__link {
+    color: #fff; }
+
+.menu__header {
+  font-size: 1rem; }
+
+.submenu {
+  position: absolute;
+  left: 0;
+  font-size: 0;
+  width: 100%;
+  padding: 0;
+  padding-top: 0.75rem;
+  background-color: #22214a;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out, visibility 0s 0.25s; }
+  .menu__item:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out, visibility 0s 0s; }
+
+.submenu__group, .submenu__group--featured {
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  padding: 1rem 0;
+  vertical-align: middle; }
+  .submenu__group--featured {
+    background-color: #33316d; }
+
+.submenu__item {
+  display: block; }
+
+.submenu__link {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.2rem; }
+  .submenu__link::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 0;
+    margin: auto;
+    transition: all 0.25s cubic-bezier(0.55, 0, 0.1, 1); }
+  .submenu__link:hover::after {
+    width: 85%; }
+
+.submenu__header {
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 0.4rem; }
+
+.a-long-time-ago {
+  font-weight: 700;
+  color: white;
+  width: 960px;
+  margin: 2rem auto;
+  text-align: justify; }
+
+/*# sourceMappingURL=application.css.map */

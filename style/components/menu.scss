@@ -1,0 +1,102 @@
+.menu {
+	background-color: $menu-bg-color;
+	text-align: center;
+	font-size: 0;
+}
+
+.menu__item {
+    display: inline-block;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+    	background-color: lighten($menu-bg-color, 5%);
+    }
+}
+
+.menu__link {
+    display: inline-block;
+    text-decoration: none;
+    color: $menu-item-color;
+    font-weight: 700;
+    padding: 0.5rem 2.5rem;
+    transition: all 0.25s ease-in-out;
+
+    .menu__item:hover & {
+    	color: $menu-item-hover-color;
+    }
+}
+
+.menu__header {
+	font-size: 1rem;
+}
+
+.submenu {
+    position: absolute;
+    left: 0;
+    font-size: 0;
+    width: 100%;
+    padding: 0;
+    padding-top: 0.75rem;
+    background-color: lighten($menu-bg-color, 5%);
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out, visibility 0s 0.25s;
+
+    .menu__item:hover & {
+    	visibility: visible;
+    	opacity: 1;
+    	transition: opacity 0.25s ease-in-out, visibility 0s 0s;
+    }
+}
+
+.submenu__group {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    padding: 1rem 0;
+    vertical-align: middle;
+
+    &--featured {
+    	@extend .submenu__group;
+    	background-color: lighten($menu-bg-color, 15%);
+    }
+}
+
+.submenu__item {
+	display: block;
+}	
+
+.submenu__link {
+	position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: none;
+    color: $submenu-item-color;
+    padding: 0.2rem;
+
+    &::after {
+    	content: '';
+    	position: absolute;
+    	background-color: $submenu-item-color;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	height: 1px;
+    	width: 0;
+    	margin: auto;
+    	transition: all 0.25s cubic-bezier(.55,0,.1,1);
+    }
+
+    &:hover::after {
+    	width: 85%;
+    }
+}
+
+.submenu__header  {
+	color: $submenu-header-color;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 0.4rem;
+}
